@@ -1,7 +1,185 @@
-.slider {
-    width: 700px;
-    height: 342px;
+/* ==========================================
+   إعدادات الخطوط والهوامش العامة للموقع
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* ==========================================
+   تنسيق شريط التنقل والفوتر باللون البحري
+   ========================================== */
+.bg-success, .navbar, .footer, footer {
+    background-color: #008080 !important; /* اللون البحري الفيروزي المميز */
+    color: white !important;
+}
+
+/* لون الروابط الفرعية في الهيدر */
+.navbar-dark .navbar-nav .nav-link {
+    color: #b3dfb3 !important;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}.navbar {
+    background-color: #3d6196;
+}
+
+/* التعديل المطلوب: تغيير لون روابط الهيدر للأسود عند مرور الماوس (Hover) */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #000000 !important;
+    background-color: transparent !important;
+}
+
+/* لون الرابط النشط حالياً */
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+/* ==========================================
+   تنسيقات كروت المأكولات (الصفحة الرئيسية)
+   ========================================== */
+/* كود سحري لتصغير وتوحيد صور الأطباق لتصطف 3 كروت في الصف الواحد بدقة */
+.card-img-top {
+    height: 200px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+}
+
+.card {
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+}
+
+.card-body {
+    padding: 1rem !important;
+}
+
+.card-title {
+    font-size: 1.05rem !important;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.8rem !important;
+    line-height: 1.4;
+    color: #666;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* تنسيق أزرار الـ Like والـ Dislike الصغيرة المتناسقة */
+.like-btn {
+    font-size: 0.8rem !important;
+    padding: 4px 12px !important;
+    width: auto !important;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+/* ==========================================
+   تنسيقات صفحة اتصل بنا (Contact Us)
+   ========================================== */
+/* رسالة النجاح الخضراء المفردة بالكامل */
+.success-alert, .alert-success {
+    background-color: #d4edda !important;
+    color: #155724 !important;
+    border: 1px solid #c3e6cb !important;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* منع تداخل الحقول وفردها بكامل الصفحة مريحة للعين */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.form-label {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* حدود الحقول الرمادية الخفيفة */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc !important;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* عند الضغط المباشر داخل الحقول للكتابة */
+.form-control:focus {
+    outline: none;
+    border-color: #3e5757 !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 128, 128, 0.25) !important;
+}
+
+/* زر الإرسال الأزرق المنظم المثبت جهة اليسار */
+.btn-primary {
+    background-color: #007bff !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 25px !important;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    align-self: flex-start; /* يمنع تمدد الزر */
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3 !important;
+}
+body{
+    background-color: #f9f9f9;
+}
+
+.like{
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #ffffff;
+}
+
+.dislike{
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #ffffff;
+}
+.like-btn {
+    background-color: #198754; /* أخضر */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.like-btn.disliked {
+    background-color: #dc3545; /* أحمر */
+    color: white;
+}
+.carousel-item img {
+    width: 100%;
+    height: 570px;
+    object-fit: cover;
 }
 .navbar {
-    background-color: #123a75;
+    background-color: #0d6efd;
 }
