@@ -1,127 +1,741 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="ar" dir="rtl">
 
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>About Us - RoboEat محمد وجيه</title>
- <!-- روابط البوتستراب الرسمية والأيقونات لتنسيق الهيدر والفوتر -->
- <link href="https://jsdelivr.net" rel="stylesheet"
-   integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
- <link rel="stylesheet" href="style.css">
- <link rel="stylesheet" href="https://cloudflare.com"
-   integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
-   crossorigin="anonymous" referrerpolicy="no-referrer" />
 
- <!-- كود التلوين المخصص لدرجة اللون البحري المعتمد في مشروعك -->
- <style>
-   .bg-success {
-       background-color: #008080 !important; /* اللون البحري الفيروزي المميز لمطعم السمك */
-   }
-   .navbar-dark .navbar-nav .nav-link {
-       color: #b3dfb3 !important;
-   }
-   .navbar-dark .navbar-nav .nav-link:hover {
-       color: #000000 !important; /* يقلب أسود عند مرور الماوس كما هو مطلوب */
-       background-color: transparent !important;
-   }
-   .navbar-dark .navbar-nav .nav-link.active {
-       color: #ffffff !important;
-   }
-   .story-title {
-       color: #008080;
-       border-bottom: 2px solid #008080;
-       padding-bottom: 10px;
-       display: inline-block;
-   }
-   .lead-text {
-       font-size: 1.2rem;
-       line-height: 1.8;
-       color: #333;
-   }
-   .paragraph-text {
-       font-size: 1.05rem;
-       line-height: 1.9;
-       color: #555;
-       text-align: justify;
-   }
- </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>مطعم محمد وجيه - للأسماك والمأكولات البحرية</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- ملف CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+
+        /* =========================
+           الصفحة
+        ========================= */
+
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, Tahoma, sans-serif;
+            direction: rtl;
+            margin: 0;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            direction: rtl;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           STORY
+        ========================= */
+
+        .story-section {
+            padding: 60px 0;
+        }
+
+        .story-content {
+            text-align: right;
+            line-height: 2;
+        }
+
+        .story-title {
+            font-size: 36px;
+            color: #0077b6;
+            text-align: right;
+        }
+
+        .lead-text {
+            font-size: 20px;
+            line-height: 2;
+            color: #333;
+        }
+
+        .paragraph-text {
+            font-size: 18px;
+            line-height: 2;
+            color: #555;
+        }
+
+        .story-content h3 {
+            color: #023e8a;
+            border-right: 5px solid #00b4d8;
+            padding-right: 12px;
+        }
+
+
+        /* =========================
+           صندوق النهاية - تصميم بحري
+        ========================= */
+
+        .story-end {
+            background: linear-gradient(
+                135deg,
+                #0077b6,
+                #023e8a
+            );
+
+            color: white;
+
+            padding: 45px 35px;
+
+            border-radius: 25px;
+
+            margin-top: 50px;
+
+            text-align: center;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.18);
+
+            border: 3px solid #00b4d8;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        /* سمكة ديكور */
+        .story-end::before {
+
+            content: "🐟";
+
+            position: absolute;
+
+            font-size: 90px;
+
+            left: 25px;
+
+            bottom: -25px;
+
+            opacity: 0.15;
+        }
+
+
+        /* جمبري ديكور */
+        .story-end::after {
+
+            content: "🦐";
+
+            position: absolute;
+
+            font-size: 80px;
+
+            right: 25px;
+
+            top: -20px;
+
+            opacity: 0.15;
+        }
+
+
+        .story-end h2 {
+
+            font-size: 30px;
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .story-end p {
+
+            font-size: 18px;
+
+            line-height: 2;
+
+            margin: 0 auto;
+
+            max-width: 900px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            background-color: #212529;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px 10px;
+
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .story-section {
+                padding: 35px 15px;
+            }
+
+            .story-title {
+                font-size: 27px;
+            }
+
+            .lead-text {
+                font-size: 17px;
+            }
+
+            .paragraph-text {
+                font-size: 16px;
+            }
+
+            .story-content h3 {
+                font-size: 21px;
+            }
+
+
+            .story-end {
+
+                padding: 30px 20px;
+
+                border-radius: 18px;
+            }
+
+
+            .story-end h2 {
+
+                font-size: 23px;
+            }
+
+
+            .story-end p {
+
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
+
 <body>
- <!-- شريط التنقل باللون البحري المرتب أفقياً مع زر الاتصال الفعلي المحدث برقمك -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-success"> 
-   <div class="container-fluid px-4">
-     <a class="navbar-brand text-light fw-bold fs-3" href="index.html">RoboEat</a>
-     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-       <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-row">
-         <li class="nav-item">
-           <a class="nav-link px-3" href="index.html">Home</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link px-3 active" href="about.html">About Us</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link px-3" href="contact.html">Contact Us</a>
-         </li>
-       </ul>
-       <!-- زر الاتصال الفعلي المحدث والمكتمل برقم الهاتف -->
-       <a href="tel:01061021148" class="d-flex text-light text-decoration-none align-items-center ms-auto">
-          <span><i class="fa fa-phone" aria-hidden="true"></i></span>
-          <span class="px-2 text-white fw-bold">Call to place order 01061021148</span>
-       </a>
-     </div>
-   </div>
- </nav>
 
- <!-- محتوى صفحة من نحن المنسق ليعرض قصة نجاح مطعم الأسماك الفخم في المعادي باللغة العربية -->
- <div class="container my-5" dir="rtl">
-   <div class="row justify-content-center">
-     <div class="col-lg-10 bg-white p-5 rounded shadow-sm border">
-       
-       <h1 class="story-title mb-4 fw-bold">قصتنا وشغفنا - مطعم محمد وجيه للمأكولات البحرية</h1>
-       
-       <p class="lead-text fw-bold mb-4">
-         من قلب حي المعادي العريق، انطلقت رحلتنا قبل ثلاثة أعوام، محملة بشغف لا ينتهي بتقديم أشهى وأجود ما تجود به أعماق البحار والمحيطات. في مطعم "محمد وجيه للأسماك"، لم نرد أن نكون مجرد مطعم مأكولات بحرية عابر، بل أردنا صياغة تجربة استثنائية فريدة تنقل روادنا إلى شواطئ البحار الطازجة مع كل لقمة طعام يتذوقونها.
-       </p>
 
-       <h3 class="mt-4 mb-3 fw-bold text-dark">ثلاث سنوات من التميز والريادة في المعادي</h3>
-       <p class="paragraph-text mb-4">
-         منذ اليوم الأول لتأسيس مطعمنا في المعادي، قطعنا عهدًا على أنفسنا بالالتزام الصارم بأعلى معايير الجودة والنظافة والخدمة الراقية. على مدار السنوات الثلاث الماضية، نجحنا بفضل الله ثم بفضل ثقة عملائنا الغالية في أن نصبح الوجهة الأولى والاسم الأبرز لكل عشاق الفواكه البحرية في القاهرة الكبرى. إن مسيرتنا التي امتدت لثلاثة أعوام هي قصة نجاح كُتبت فصولها بالجد والاجتهاد، والبحث الدائم عن التميز، والتطوير المستمر لوصفاتنا وتتبيلاتنا السرية التي جعلت من اسم "محمد وجيه" علامة مسجلة للمذاق الفاخر الأصيل.
-       </p>
+<!-- =========================
+     NAVBAR
+========================= -->
 
-       <h3 class="mt-4 mb-3 fw-bold text-dark">بحر من الاختيارات: جميع خيرات الأعماق تحت سقف واحد</h3>
-       <p class="paragraph-text mb-4">
-         نحن نتميز بامتلاكنا لأكبر تشكيلة من الأسماك والمأكولات البحرية الطازجة التي تأتي إلينا يوميًا مباشرة من الموانئ البحرية وشباك الصيادين. في مطعم محمد وجيه، ستجد كل ما تشتهيه وتتخيله من خيرات البحر؛ بدءًا من الأسماك الشعبية واليومية المحبوبة مثل البوري والبلطي البلطي السويسي الفاخر، وصولاً إلى أرقى وأندر أنواع الأسماك البحرية مثل القاروص، الدنيس، والوقار.
-       </p>
-       <p class="paragraph-text mb-4">
-         ولا تتوقف قائمتنا عند الأسماك فحسب، بل نفخر بتقديم قسم خاص وفخم لعشاق القشريات والفواكه البحرية العملاقة. نوفر لكم الإستاكوزا الحية المطهوة بطرق عالمية ومبتكرة، والجمبري بجميع أحجامه من الجمبري الصغير المخصص للشوربة الفاخرة إلى الجمبري الجامبو والجامبو العملاق المشوي على الفحم أو المطهو بخلطة الزبدة والثوم السحرية. هذا بالإضافة إلى الكابوريا الطازجة الممتلئة باللحم، وبلح البحر، والسي فود المشكل، والكاليماري والسبيط البلدي.
-       </p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-       <h3 class="mt-4 mb-3 fw-bold text-dark">أسرار الطهي وفلسفة المطبخ لدينا</h3>
-       <p class="paragraph-text mb-4">
-         إن سر نجاح مطعم محمد وجيه لا يكمن فقط في جودة الأسماك الطازجة، بل في الطريقة الاحترافية التي نعتمدها لطهي الطعام. يقود مطبخنا طهاة محترفون أمضوا سنوات طويلة في دراسة واحتراف فنون المأكولات البحرية. نحن نمزج بين الطرق التقليدية المصرية الأصيلة في الشيّ والقلي والتطجين، وبين اللمسات العصرية العالمية التي ترضي جميع الأذواق. نعدكم بأن نحافظ على هذا الشغف المشتعل، ونستمر معاً في كتابة سطور هذه القصة البحرية الشهية، وتقديم أفضل تجربة لتناول الطعام البحري تليق بكم وبأسركم.
-       </p>
+    <div class="container">
 
-     </div>
-   </div>
- </div>
+        <!-- اسم المطعم -->
 
- <!-- قسم الفوتر المثبت في أسفل الصفحة باللون البحري المتناسق -->
- <section>
-   <footer class="bg-success text-center py-3">
-     <span class="text-light fw-bold">&copy; 2026 Robogarden Inc. - محمد وجيه</span>
-   </footer>
- </section>
+        <a
+            class="navbar-brand text-light"
+            href="index.html">
 
- <!-- روابط السكربتات والـ jQuery الرسمية لضمان عمل الموقع بالكامل -->
- <script src="https://jquery.com" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
- <script src="https://jsdelivr.net" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            مطعم محمد وجيه
+
+        </a>
+
+
+        <!-- زر الموبايل -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- روابط القائمة -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarContent">
+
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                <!-- الرئيسية -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html">
+
+                        الرئيسية
+
+                    </a>
+
+                </li>
+
+
+                <!-- قصتنا -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="about.html">
+
+                        قصتنا
+
+                    </a>
+
+                </li>
+
+
+                <!-- تواصل معنا -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="contact.html">
+
+                        تواصل معنا
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <!-- رقم الهاتف -->
+
+            <a
+                href="tel:+201080336738"
+                class="text-white text-decoration-none">
+
+                📞 اتصل لطلب الطعام
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     STORY
+========================= -->
+
+<section class="story-section">
+
+    <div class="container">
+
+        <div
+            class="story-content"
+            dir="rtl">
+
+
+            <!-- العنوان -->
+
+            <h1
+                class="story-title mb-4 fw-bold">
+
+                قصتنا وشغفنا -
+                مطعم محمد وجيه للأسماك والمأكولات البحرية
+
+            </h1>
+
+
+            <!-- المقدمة -->
+
+            <p
+                class="lead-text fw-bold mb-4">
+
+                من قلب المعادي، بدأت رحلتنا منذ 3 سنوات
+                بشغف كبير بتقديم أشهى وأجود أطباق الأسماك
+                والمأكولات البحرية.
+
+                في مطعم محمد وجيه، لم نرد أن نكون مجرد
+                مطعم يقدم الطعام، بل سعينا منذ اليوم الأول
+                إلى تقديم تجربة مميزة تجمع بين جودة الأسماك،
+                الطعم الأصيل، والخدمة التي تليق بكل زائر.
+
+            </p>
+
+
+
+            <!-- =========================
+                 3 سنوات
+            ========================= -->
+
+            <h3
+                class="mt-4 mb-3 fw-bold">
+
+                3 سنوات من التميز في المعادي
+
+            </h3>
+
+
+            <p
+                class="paragraph-text mb-4">
+
+                منذ افتتاح مطعمنا في المعادي، وضعنا أمام
+                أعيننا هدفًا واضحًا، وهو تقديم أفضل جودة
+                ممكنة من الأسماك والمأكولات البحرية مع
+                الحفاظ على المذاق المميز الذي يحبه عملاؤنا.
+
+                وعلى مدار 3 سنوات، استطعنا بفضل الله ثم
+                بثقة عملائنا أن نبني اسمًا مميزًا في مجال
+                الأسماك والمأكولات البحرية.
+
+            </p>
+
+
+            <p
+                class="paragraph-text mb-4">
+
+                كانت رحلتنا خلال السنوات الثلاث الماضية
+                مليئة بالعمل والتطوير والاستماع إلى آراء
+                عملائنا.
+
+                وكل يوم كان بالنسبة لنا فرصة جديدة لنقدم
+                مستوى أفضل من الطعام والخدمة، وأن نحافظ
+                على الثقة التي منحها لنا أهل المعادي وزوارها.
+
+            </p>
+
+
+
+            <!-- =========================
+                 المأكولات البحرية
+            ========================= -->
+
+            <h3
+                class="mt-4 mb-3 fw-bold">
+
+                عالم من الأسماك والمأكولات البحرية
+
+            </h3>
+
+
+            <p
+                class="paragraph-text mb-4">
+
+                في مطعم محمد وجيه، نقدم مجموعة متنوعة
+                من أجود أطباق الأسماك والمأكولات البحرية
+                التي تناسب جميع أفراد الأسرة.
+
+                تضم قائمتنا تشكيلة مميزة من الأسماك
+                المشوية والمقلية، الجمبري، الكابوريا،
+                السبيط، الفيليه، بالإضافة إلى العديد
+                من أطباق المأكولات البحرية الشهية.
+
+            </p>
+
+
+            <p
+                class="paragraph-text mb-4">
+
+                ونهتم أيضًا بأن تكون الوجبة متكاملة
+                من جميع الجوانب، لذلك نقدم الأرز
+                والسلطات والمقبلات والطحينة والأطباق
+                الجانبية التي تتناسب مع الأسماك
+                والمأكولات البحرية.
+
+                حتى يستمتع العميل بوجبة شهية ومتكاملة
+                سواء كان يتناولها بمفرده أو مع عائلته
+                وأصدقائه.
+
+            </p>
+
+
+
+            <!-- =========================
+                 الجودة
+            ========================= -->
+
+            <h3
+                class="mt-4 mb-3 fw-bold">
+
+                جودة الأسماك هي أولويتنا
+
+            </h3>
+
+
+            <p
+                class="paragraph-text mb-4">
+
+                نؤمن أن الطعم المميز يبدأ من اختيار
+                المكونات بعناية.
+
+                ولذلك نهتم باختيار الأسماك والمأكولات
+                البحرية بجودة عالية، ونحرص على تجهيزها
+                بطريقة مناسبة تحافظ على مذاقها وجودتها.
+
+                كما نهتم بكل خطوة من خطوات إعداد الطعام،
+                بداية من تجهيز المكونات وحتى وصول الطبق
+                ساخنًا وشهيًا إلى العميل.
+
+            </p>
+
+
+            <p
+                class="paragraph-text mb-4">
+
+                هدفنا ليس فقط أن نقدم وجبة جيدة، ولكن
+                أن نقدم وجبة تجعل العميل يرغب في العودة
+                مرة أخرى.
+
+                ولهذا نحرص على النظافة، جودة المكونات،
+                طريقة الطهي، والتقديم، بالإضافة إلى
+                التعامل المحترم مع كل شخص يزور مطعمنا.
+
+            </p>
+
+
+
+            <!-- =========================
+                 سر المذاق
+            ========================= -->
+
+            <h3
+                class="mt-4 mb-3 fw-bold">
+
+                سر المذاق المميز
+
+            </h3>
+
+
+            <p
+                class="paragraph-text mb-4">
+
+                لكل مطعم طريقته الخاصة في إعداد الطعام،
+                ونحن في مطعم محمد وجيه نحرص على أن يكون
+                لنا مذاق مميز يعرفه عملاؤنا.
+
+                نعتمد على التتبيلات والبهارات المختارة
+                بعناية، مع طرق طهي مناسبة لكل نوع من
+                أنواع الأسماك والمأكولات البحرية.
+
+            </p>
+
+
+            <p
+                class="paragraph-text mb-4">
+
+                كما نحرص على أن يتم إعداد الطعام عند
+                الطلب قدر الإمكان، حتى يحصل العميل على
+                وجبة ساخنة وطازجة تتمتع بالمذاق المميز
+                الذي نحبه ونفتخر بتقديمه.
+
+            </p>
+
+
+
+            <!-- =========================
+                 رضا العملاء
+            ========================= -->
+
+            <h3
+                class="mt-4 mb-3 fw-bold">
+
+                رضا عملائنا هو نجاحنا الحقيقي
+
+            </h3>
+
+
+            <p
+                class="paragraph-text mb-4">
+
+                خلال السنوات الثلاث الماضية، كان رضا
+                عملائنا هو الدافع الأكبر لنا للاستمرار
+                والتطور.
+
+                كل كلمة تقدير من عميل، وكل زيارة متكررة،
+                وكل شخص يرشح مطعمنا لعائلته وأصدقائه،
+                تمثل بالنسبة لنا نجاحًا حقيقيًا نفتخر به.
+
+            </p>
+
+
+            <p
+                class="paragraph-text mb-4">
+
+                نحن نؤمن أن المطعم الناجح لا يعتمد فقط
+                على الطعام، بل يعتمد أيضًا على حسن
+                التعامل، سرعة الخدمة، النظافة، والاهتمام
+                بتفاصيل تجربة العميل من لحظة دخوله المطعم
+                وحتى مغادرته.
+
+            </p>
+
+
+
+            <!-- =========================
+                 المستقبل
+            ========================= -->
+
+            <h3
+                class="mt-4 mb-3 fw-bold">
+
+                رؤيتنا للمستقبل
+
+            </h3>
+
+
+            <p
+                class="paragraph-text mb-4">
+
+                بعد 3 سنوات من العمل والنجاح، ما زال
+                طموحنا أكبر.
+
+                نسعى باستمرار إلى تطوير قائمتنا،
+                إضافة أطباق جديدة، تحسين مستوى الخدمة،
+                والاستفادة من آراء عملائنا حتى نكون
+                دائمًا عند حسن ظنهم.
+
+            </p>
+
+
+            <p
+                class="paragraph-text mb-4">
+
+                ونطمح أن يستمر اسم مطعم محمد وجيه
+                في النمو والانتشار، وأن يصبح وجهة
+                مفضلة لكل محبي الأسماك والمأكولات
+                البحرية في المعادي وكل من يزور المنطقة.
+
+            </p>
+
+
+
+            <!-- =========================
+                 النهاية الجديدة
+            ========================= -->
+
+            <div class="story-end">
+
+                <h2>
+
+                    🐟 مطعم محمد وجيه...
+                    طعم البحر في قلب المعادي 🦐
+
+                </h2>
+
+
+                <p>
+
+                    قصتنا بدأت منذ 3 سنوات، ولكن شغفنا
+                    بتقديم أفضل وأجود المأكولات البحرية
+                    لا يتوقف.
+
+                    نحرص دائمًا على اختيار أجود أنواع
+                    الأسماك، وتقديمها بطريقة مميزة تحافظ
+                    على الطعم والجودة، مع الاهتمام
+                    بالنظافة وحسن الخدمة ورضا عملائنا.
+
+                    أهلاً وسهلاً بكم دائمًا في مطعم
+                    محمد وجيه للأسماك والمأكولات البحرية
+                    في المعادي، ونتمنى أن تستمتعوا معنا
+                    بأشهى الأطباق وأجمل تجربة. ❤️
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+
+        © 2026 مطعم محمد وجيه
+        للأسماك والمأكولات البحرية
+
+    </p>
+
+
+    <p>
+
+        المعادي - القاهرة |
+        جميع الحقوق محفوظة
+
+    </p>
+
+</footer>
+
+
+
+<!-- =========================
+     Bootstrap JavaScript
+========================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
 </body>
 
 </html>
